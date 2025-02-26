@@ -11,7 +11,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
                 <div className="w-full flex-col flex md:w-[500px]">
                     <TodoCompleter />
                 </div>
-                <div className="flex-grow md:overflow-y-auto md:px-0 text-center items-center bg-special-800 p-4 border-l border-b border-r border-special-500 md:h-full">
+                <div className="flex-grow md:overflow-y-auto md:px-0 text-center items-center bg-special-800 p-4 border-l border-b border-special-500 md:h-full">
                     {children}
                 </div>
             </div>

@@ -9,7 +9,7 @@ import { changeStatus } from "@/app/lib/actions";
 export default function ChangeTodo({ todo }: { todo: todoProps }) {
     return (
         <Form action={changeStatus}>
-            <Input name='inputId' value={todo.id} type='hidden'></Input>
+            <Input name='inputId' value={todo.id} type='hidden' />
             <Button
                 text={<FaCheck />}
                 type='submit'

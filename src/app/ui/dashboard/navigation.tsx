@@ -2,10 +2,10 @@
 
 export default function NavBar() {
     return (
-        <nav className="border-b border-special-500 bg-special-800 py-2 px-4 flex items-center justify-between">
+        <nav className="anitialiased border-b border-special-500 bg-special-800 py-2 px-4 flex items-center justify-between">
             {/* Logo Section */}
             <div className="flex items-center gap-2">
-                <span className="text-2xl font-bold text-special-50">📝 Insert logo...</span>
+                <span className="text-xl anitialiased text-special-50">📝 Insert logo...</span>
             </div>
 
             {/* Navigation Links */}

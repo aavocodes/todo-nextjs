@@ -1,22 +1,22 @@
-import { prisma } from "@/utils/prisma";
+// import { prisma } from "@/utils/prisma";
 
-async function getData() {
-    const data = await prisma.todo.findMany({
-        select: {
-            title: true,
-            id: true,
-            isCompleted: true,
-            createAt: true
-        },
-        orderBy: {
-            createAt: "asc",
-        },
-    })
-    return data
-}
+// async function getData() {
+//     const data = await prisma.todo.findMany({
+//         select: {
+//             title: true,
+//             id: true,
+//             isCompleted: true,
+//             createAt: true
+//         },
+//         orderBy: {
+//             createAt: "asc",
+//         },
+//     })
+//     return data
+// }
 
 export default async function TodoCompleter() {
-    const data = await getData();
+    // const data = await getData();
 
     return (
         <div className="flex h-full flex-col bg-special-600 md:p-0">

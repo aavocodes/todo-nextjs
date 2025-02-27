@@ -1,7 +1,7 @@
 import { buttonProps } from "@/types";
 import clsx from 'clsx'
 
-export default function Button({ type, text, onClick, actionButton, bgColor, ...props }: buttonProps) {
+export default function Button({ type, text, onClick, actionButton, bgColor }: buttonProps) {
     return (
         <div>
             <button onClick={onClick} type={type} className={clsx(

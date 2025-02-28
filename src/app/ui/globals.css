@@ -21,11 +21,11 @@ body {
 }
 
 @keyframes ringAnimation {
-    0% { box-shadow: 0 0 10px #ff007f; }  /* Pink */
+    0% { box-shadow: 0 0 10px #edd74c; }  /* Pink */
     25% { box-shadow: 0 0 10px #ff9900; } /* Orange */
-    50% { box-shadow: 0 0 10px #00ff99; } /* Green */
-    75% { box-shadow: 0 0 10px #007bff; } /* Blue */
-    100% { box-shadow: 0 0 10px #ff007f; } /* Back to Pink */
+    50% { box-shadow: 0 0 10px #33b184; } /* Green */
+    75% { box-shadow: 0 0 10px #ff9900; } /* Blue */
+    100% { box-shadow: 0 0 10px #edd74c; } /* Back to Pink */
 }
 
 .focus\:ring-animated-ring:focus {

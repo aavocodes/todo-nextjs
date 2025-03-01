@@ -16,7 +16,7 @@ export default async function createTodo(formData: FormData) {
         },
     });
 
-    revalidatePath('/');
+    revalidatePath('/dashboard');
 }
 
 export async function changeStatus(formData: FormData) {
@@ -38,5 +38,5 @@ export async function changeStatus(formData: FormData) {
         },
     });
 
-    revalidatePath('/');
+    revalidatePath('/dashboard');
 }

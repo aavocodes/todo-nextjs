@@ -8,9 +8,9 @@ export default function Button({ type, text, onClick, actionButton, bgColor, cla
                 onClick={onClick}
                 type={type}
                 className={clsx(
-                    actionButton && "text-special-50 cursor-pointer transition hover:bg-jade-800 focus:ring-4 font-medium rounded-lg text-sm px-4 py-1.5 ml-0 mr-2 my-1 focus:outline-none",
+                    actionButton && "text-special-50 cursor-pointer transition  focus:ring-4 font-medium rounded-lg text-sm px-4 py-1.5 ml-0 mr-2 my-1 focus:outline-none",
                     bgColor,
-                    "hover:bg-jade-800 text-special-50 cursor-pointer transition font-medium rounded-lg text-sm px-4 py-2.5 mb-2 focus:outline-none",
+                    "text-special-50 cursor-pointer transition font-medium rounded-lg text-sm px-4 py-2.5 mb-2 focus:outline-none",
                     className
                 )}
             >

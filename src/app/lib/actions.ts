@@ -4,7 +4,7 @@ import { prisma } from '@/utils/prisma'
 import { revalidatePath } from 'next/cache';
 
 
-export default async function createTodo(formData: FormData) {
+export async function createTodo(formData: FormData) {
     const input = formData.get('input') as string;
     if (!input.trim()) {
         return;
@@ -42,12 +42,28 @@ export async function changeStatus(formData: FormData) {
 }
 
 export async function updateTodoTitle(formData: FormData) {
-    const id = formData.get("inputId") as string;
+    const inputId = formData.get("inputId") as string;
     const newTitle = formData.get("newTitle") as string;
 
     await prisma.todo.update({
-        where: { id },
-        data: { title: newTitle },
+        where: {
+            id: inputId
+        },
+        data: {
+            title: newTitle
+        },
+    });
+
+    revalidatePath('/dashboard')
+}
+
+export async function deleteTodo(formData: FormData) {
+    const inputId = formData.get('inputId') as string;
+    
+    await prisma.todo.delete({
+        where: {
+            id: inputId
+        }
     });
 
     revalidatePath('/dashboard')

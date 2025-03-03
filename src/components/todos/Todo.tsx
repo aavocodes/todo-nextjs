@@ -4,6 +4,7 @@ import { useState } from "react";
 import { todoProps } from "@/types";
 import ChangeTodo from "./ChangeTodo";
 import EditTodo from "./EditTodo";
+import DeleteTodo from "./DeleteTodo";
 
 export default function Todo({ todo }: { todo: todoProps }) {
     const [isEditing, setIsEditing] = useState(false);
@@ -15,18 +16,21 @@ export default function Todo({ todo }: { todo: todoProps }) {
 
             {/* Hide todo title while editing */}
             {!isEditing && (
-                <span className='anitialiased uppercase break-words overflow-hidden text-ellipsis'>
+                <span className='anitialiased uppercase break-words overflow-hidden text-ellipsis mx-1'>
                     {todo.title}
                 </span>
             )}
 
-            <div className='flex ml-auto'>
-                {/* EditTodo - Controls edit mode */}
-                <EditTodo todo={todo} isEditing={isEditing} setIsEditing={setIsEditing} />
-            </div>
+            <div className='flex ml-auto mr-1'>
+                <div>
+                    {/* EditTodo - Controls edit mode */}
+                    <EditTodo todo={todo} isEditing={isEditing} setIsEditing={setIsEditing} />
+                </div>
 
-            <div className='flex items-center mx-2'>
-                {/* DeleteTodo (kept for layout purposes) */}
+                <div>
+                    {/* DeleteTodo (kept for layout purposes) */}
+                    {!isEditing && <DeleteTodo todo={todo} />}
+                </div>
             </div>
         </div>
     )

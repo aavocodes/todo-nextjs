@@ -2,6 +2,7 @@
 
 import { useState } from 'react';
 import { MdEdit } from 'react-icons/md';
+import { FaCheck } from 'react-icons/fa';
 import Form from '../form/Form';
 import Input from '../input/Input';
 import Button from '../button/Button';
@@ -42,14 +43,18 @@ export default function EditTodo({
                     onClick={handleEdit}
                     text={<MdEdit />}
                     actionButton
-                    bgColor='bg-special-600 hover:bg-special-700'
+                    bgColor='bg-special-500 hover:bg-special-600'
                 />
             ) : (
                 <Form action={updateTodoTitle} onSubmit={handleSubmit} className='flex items-center w-full'>
                     <Input name='inputId' value={todo.id} type='hidden' />
-                    <div className='flex flex-row w-[300px] max-w-[300px] gap-x-2 pt-1 mr-4'>
-                        <Input name='newTitle' type='text' value={newTitle} onChange={handleChange} placeholder='Edit todo...' />
-                        <Button type='submit' text='Save' bgColor='text-special-50 border border-special-500 hover:text-special-50 hover:bg-special-700 cursor-pointer transition bg-special-800' />
+                    <div className='flex flex-row w-[320px] max-w-[320px] gap-x-2 pt-1 mr-4'>
+                        <Input name='newTitle' type='text' value={newTitle} onChange={handleChange} className='py-[5px] mt-[.5px]' />
+                        <Button
+                            type='submit'
+                            text={<FaCheck />}
+                            bgColor='text-special-50 border border-special-500 hover:text-special-50 hover:bg-special-700 cursor-pointer transition bg-special-800'
+                            className='py-2 mt-[.5px]'/>
                     </div>
                 </Form>
             )}

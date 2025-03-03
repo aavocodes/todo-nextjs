@@ -5,13 +5,14 @@ export interface inputProps {
     type: string;
     placeholder?: string;
     value?: string;
+    onChange?: (e: React.ChangeEvent<HTMLInputElement>) => void;
 }
 
 export interface formProps {
     children: ReactNode;
     action: (formData: FormData) => void;
     className?: string;
-    onSubmit?: () => void;
+    onSubmit?: (e: React.FormEvent<HTMLFormElement>) => void;
 }
 
 export interface buttonProps {
@@ -20,6 +21,7 @@ export interface buttonProps {
     onClick?: () => void;
     actionButton?: boolean;
     bgColor?: string;
+    className?: string;
 }
 
 export interface todoProps {

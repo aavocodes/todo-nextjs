@@ -40,3 +40,15 @@ export async function changeStatus(formData: FormData) {
 
     revalidatePath('/dashboard');
 }
+
+export async function updateTodoTitle(formData: FormData) {
+    const id = formData.get("inputId") as string;
+    const newTitle = formData.get("newTitle") as string;
+
+    await prisma.todo.update({
+        where: { id },
+        data: { title: newTitle },
+    });
+
+    revalidatePath('/dashboard')
+}

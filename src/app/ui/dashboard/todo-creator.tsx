@@ -14,7 +14,7 @@ async function getData() {
             createAt: true
         },
         orderBy: {
-            createAt: "asc",
+            createAt: "desc",
         },
     })
     return data
@@ -24,12 +24,12 @@ export default async function TodoCreator() {
     const data = await getData();
 
     return (
-        <div className='flex flex-col justify-center items-center'>
-            <div className='max-w-[400px]'>
+        <div className='flex flex-col justify-center items-center w-full]'>
+            <div className='max-w-[400px] w-[368px] py-6'>
                 {/* input add todo form */}
                 <AddTodo />
                 {/* generate todos on mobile screen */}
-                <div className='mt-10 space-y-4'>
+                <div className='w-full mt-10 space-y-4'>
                     {data.map((todo, id) => (
                         <div key={id}>
                             <Todo todo={todo} />

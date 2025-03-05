@@ -11,7 +11,7 @@ export default function AddTodo() {
                 <Form action={actions.createTodo}>
                     <div className='flex gap-2'>
                         <Input name='input' type='text' placeholder='Add todo...' className='py-[7px] mt-[1px]' />
-                        <Button type='submit' text={<MdAdd size={15} />} bgColor='bg-special-600 hover:bg-special-700' className='py-[12.3px] mt-[1.3px]'/>
+                        <Button type='submit' text={<MdAdd size={15} />} bgColor='bg-special-600 hover:bg-special-700' className='py-[11.5px] mt-[1.5px]'/>
                     </div>
                 </Form>
             </Suspense>

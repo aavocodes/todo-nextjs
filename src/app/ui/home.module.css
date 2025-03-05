@@ -1,0 +1,24 @@
+/* .shape {
+  height: 0;
+  width: 0;
+  border-bottom: 30px solid black;
+  border-left: 20px solid transparent;
+  border-right: 20px solid transparent;
+} */
+
+.shape {
+  height: 0;
+  width: 0;
+  border-left: 15px solid transparent;
+  border-right: 15px solid transparent;
+  border-bottom-width: 20px;
+  @apply border-b-jade-400; /* Tailwind custom color */
+}
+
+.shape2 {
+    height: 0;
+    width: 0;
+    border-bottom: 20px solid blue;
+    border-left: 15px solid transparent;
+    border-right: 15px solid transparent;
+}

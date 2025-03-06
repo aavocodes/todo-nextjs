@@ -1,4 +1,4 @@
-'use server';
+export const dynamic = 'force dynamic';
 
 import { prisma } from "@/utils/prisma";
 import Todo from "@/components/todos/Todo";

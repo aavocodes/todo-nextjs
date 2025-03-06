@@ -1,11 +1,14 @@
-export const dynamic = 'force dynamic';
+export const revalidate = 0;
 
 import AddTodo from "@/components/todos/AddTodo";
 import Todo from "@/components/todos/Todo";
 import { prisma } from "@/utils/prisma";
 
 async function getData() {
+
+    console.log('Starting timeout...')
     await new Promise(resolve => setTimeout(resolve, 4000));
+    console.log('Timeout completed!')
 
     const data = await prisma.todo.findMany({
         where: {

@@ -3,6 +3,8 @@ import Todo from "@/components/todos/Todo";
 import { prisma } from "@/utils/prisma";
 
 async function getData() {
+    await new Promise(resolve => setTimeout(resolve, 4000));
+
     const data = await prisma.todo.findMany({
         where: {
             isCompleted: false,
@@ -26,9 +28,7 @@ export default async function TodoCreator() {
     return (
         <div className='flex flex-col justify-center items-center w-full]'>
             <div className='max-w-[400px] w-[368px] py-6'>
-                {/* input add todo form */}
                 <AddTodo />
-                {/* generate todos on mobile screen */}
                 <div className='w-full mt-10 space-y-4'>
                     {data.map((todo, id) => (
                         <div key={id}>

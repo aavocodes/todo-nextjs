@@ -23,12 +23,9 @@ export default function Todo({ todo }: { todo: todoProps }) {
 
             <div className='flex ml-auto mr-1'>
                 <div>
-                    {/* EditTodo - Controls edit mode */}
                     <EditTodo todo={todo} isEditing={isEditing} setIsEditing={setIsEditing} />
                 </div>
-
                 <div>
-                    {/* DeleteTodo (kept for layout purposes) */}
                     {!isEditing && <DeleteTodo todo={todo} />}
                 </div>
             </div>

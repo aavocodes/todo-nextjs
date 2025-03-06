@@ -1,10 +1,12 @@
 import { prisma } from "@/utils/prisma";
-import Todo from "@/components/todos/Todo"; // Import the Todo component to display completed todos
+import Todo from "@/components/todos/Todo";
 
 async function getCompletedTodos() {
+    await new Promise(resolve => setTimeout(resolve, 4000));
+
     const data = await prisma.todo.findMany({
         where: {
-            isCompleted: true, // Only fetch completed todos
+            isCompleted: true,
         },
         select: {
             title: true,
@@ -30,7 +32,6 @@ export default async function TodoCompleter() {
                 {/* Responsive completed todos container */}
                 <div className="flex flex-col items-center mt-6">
                     <div className="max-w-[400px] p-4 rounded-lg">
-                        {/* Ensure todos take full width and are properly spaced */}
                         <div className="w-full space-y-4">
                             {completedTodos.map(todo => (
                                 <Todo key={todo.id} todo={todo} />

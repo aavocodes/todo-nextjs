@@ -1,3 +1,5 @@
+'use server';
+
 import AddTodo from "@/components/todos/AddTodo";
 import Todo from "@/components/todos/Todo";
 import { prisma } from "@/utils/prisma";

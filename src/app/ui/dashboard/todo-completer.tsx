@@ -4,9 +4,10 @@ import { prisma } from "@/utils/prisma";
 import Todo from "@/components/todos/Todo";
 
 async function getCompletedTodos() {
-    console.log('Starting timeout...')
-    await new Promise(resolve => setTimeout(resolve, 4000));
-    console.log('Timeout completed!')
+
+    // console.log('Starting timeout...')
+    // await new Promise(resolve => setTimeout(resolve, 4000));
+    // console.log('Timeout completed!')
 
     const data = await prisma.todo.findMany({
         where: {
@@ -26,6 +27,9 @@ async function getCompletedTodos() {
 }
 
 export default async function TodoCompleter() {
+    // console.log('Starting timeout...')
+    // await new Promise(resolve => setTimeout(resolve, 4000));
+    // console.log('Timeout completed!')
     const completedTodos = await getCompletedTodos();
 
     return (

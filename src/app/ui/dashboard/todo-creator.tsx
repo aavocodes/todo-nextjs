@@ -4,11 +4,11 @@ import AddTodo from "@/components/todos/AddTodo";
 import Todo from "@/components/todos/Todo";
 import { prisma } from "@/utils/prisma";
 
-async function getData() {
+async function getTodos() {
 
-    console.log('Starting timeout...')
-    await new Promise(resolve => setTimeout(resolve, 4000));
-    console.log('Timeout completed!')
+    // console.log('Starting timeout...')
+    // await new Promise(resolve => setTimeout(resolve, 4000));
+    // console.log('Timeout completed!')
 
     const data = await prisma.todo.findMany({
         where: {
@@ -24,11 +24,11 @@ async function getData() {
             createAt: "desc",
         },
     })
-    return data
+    return data;
 }
 
 export default async function TodoCreator() {
-    const data = await getData();
+    const data = await getTodos();
 
     return (
         <div className='flex flex-col justify-center items-center w-full]'>

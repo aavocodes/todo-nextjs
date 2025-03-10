@@ -30,7 +30,12 @@ export default function NavBar() {
             </div>
 
             <button className="px-4 py-2 bg-special-800 hover:bg-special-700 border border-special-500 rounded-lg transition">
-                <p className='text-sm text-special-50'>Sign In</p>
+                <Link
+                    className='text-sm text-special-50'
+                    href='/login'
+                >
+                    Sign In
+                </Link>
             </button>
         </nav>
     )

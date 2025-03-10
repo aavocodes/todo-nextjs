@@ -8,7 +8,7 @@ export default function Page() {
   return (
     <main className='flex min-h-screen flex-col p-6'>
       <NavBar />
-      <div className="flex h-20 shrink-0 items-end rounded-lg border border-special-400 bg-special-500 p-4 md:h-52 mt-14">
+      <div className="flex h-20 shrink-0 items-end rounded-lg border border-special-400 bg-special-500 p-4 md:h-52 mt-16">
         <h1 className='text-5xl text-gray-200'>
           🍵 Logo
         </h1>
@@ -24,7 +24,7 @@ export default function Page() {
           </p>
           <div className='flex grow flex-col lg:flex-row gap-4 mt-4'>
             <Link
-              href='/dashboard'
+              href='/login'
               className='flex items-center gap-4 self-start rounded-lg bg-special-500 px-6 py-3 text-sm font-medium transition-colors hover:bg-special-600 md:text-base whitespace-nowrap'
             >
               <span>Login</span> <ArrowRightIcon className='w-5 md:w-6' />

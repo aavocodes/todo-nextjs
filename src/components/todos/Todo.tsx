@@ -23,7 +23,7 @@ export default function Todo({ todo }: { todo: todoProps }) {
 
             <div className='flex ml-auto mr-1'>
                 <div>
-                    <EditTodo todo={todo} isEditing={isEditing} setIsEditing={setIsEditing} />
+                    <EditTodo key={todo.id} todo={todo} isEditing={isEditing} setIsEditing={setIsEditing} />
                 </div>
                 <div>
                     {!isEditing && <DeleteTodo todo={todo} />}

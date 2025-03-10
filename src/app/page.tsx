@@ -6,9 +6,9 @@ import NavBar from "./ui/dashboard/navigation";
 
 export default function Page() {
   return (
-    <main className='flex min-h-screen flex-col p-6'>
+    <main className={`${roboto.className} flex min-h-screen flex-col p-6`}>
       <NavBar />
-      <div className="flex h-20 shrink-0 items-end rounded-lg border border-special-400 bg-special-500 p-4 md:h-52 mt-16">
+      <div className="flex h-20 shrink-0 items-end rounded-lg border border-special-400 bg-special-500 p-4 md:h-40 mt-16">
         <h1 className='text-5xl text-gray-200'>
           🍵 Logo
         </h1>

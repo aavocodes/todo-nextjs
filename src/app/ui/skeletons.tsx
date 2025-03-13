@@ -18,7 +18,7 @@ export function TodoCompleterSkeleton() {
     return (
         <div className="flex flex-grow flex-col py-4 w-full items-center border-t border-special-300 md:border-0 md:border-r">
             <div className="flex flex-col grow bg-special-800 p-4 text-center w-full">
-                <h1 className="text-lg md:text-2xl text-center">Completed todos</h1>
+                <h1 className="text-lg md:text-2xl text-center">Completed</h1>
 
                 <div className="flex flex-col items-center mt-6 w-full">
                     <div className="max-w-[400px] w-full p-4 rounded-lg">

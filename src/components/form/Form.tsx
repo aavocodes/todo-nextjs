@@ -3,7 +3,6 @@
 import { formProps } from "@/types"
 import { useRef } from 'react'
 
-// add className back as prop after deployment
 export default function Form({ children, action, onSubmit }: formProps) {
     const ref = useRef<HTMLFormElement>(null);
 

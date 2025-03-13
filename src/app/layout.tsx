@@ -1,5 +1,8 @@
 import type { Metadata } from "next";
 import "./ui/globals.css";
+import "@/app/ui/home.module.css"
+import NavBar from "./ui/dashboard/navigation";
+import { SessionProvider } from 'next-auth/react';
 
 export const metadata: Metadata = {
   title: "Todo app",
@@ -12,10 +15,13 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
-      <body className='bg-special-800 text-special-50'>
-        {children}
-      </body>
-    </html>
+    <SessionProvider>
+      <html lang="en">
+        <body className='bg-special-800 text-special-50'>
+          <NavBar />
+          {children}
+        </body>
+      </html>
+    </SessionProvider>
   );
 }

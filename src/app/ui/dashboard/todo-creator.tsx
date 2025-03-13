@@ -2,17 +2,15 @@ export const revalidate = 0;
 
 import AddTodo from "@/components/todos/AddTodo";
 import Todo from "@/components/todos/Todo";
-import { prisma } from "@/utils/prisma";
+import prisma from "@/utils/prisma";
+import { auth } from "@/auth";
 
-async function getTodos() {
-
-    // console.log('Starting timeout...')
-    // await new Promise(resolve => setTimeout(resolve, 4000));
-    // console.log('Timeout completed!')
+async function getTodos(userId: string) {
 
     const data = await prisma.todo.findMany({
         where: {
             isCompleted: false,
+            userId: userId,
         },
         select: {
             title: true,
@@ -28,7 +26,14 @@ async function getTodos() {
 }
 
 export default async function TodoCreator() {
-    const data = await getTodos();
+    const session = await auth();
+    if (!session?.user?.id) {
+        return <div>Please log in to view your current tasks.</div>
+    }
+
+    const userId = session.user.id;
+
+    const data = await getTodos(userId);
 
     return (
         <div className='flex flex-col justify-center items-center w-full]'>

@@ -1,4 +1,3 @@
-import NavBar from '../ui/dashboard/navigation';
 import TodoCompleter from '@/app/ui/dashboard/todo-completer'
 import { roboto } from '../ui/font';
 import { Suspense } from 'react';
@@ -10,7 +9,6 @@ export default async function Layout({ children }: { children: React.ReactNode }
 
     return (
         <div className={`${roboto.className}`}>
-            <NavBar />
             <div className="pt-16 w-full flex h-screen flex-col md:flex-row md:overflow-y-auto md:px-0 bg-special-800">
                 <div className="w-full flex-col flex md:w-[50%] md:overflow-y-auto order-last md:order-first bg-special-800">
                     <Suspense fallback={<TodoCompleterSkeleton />}>

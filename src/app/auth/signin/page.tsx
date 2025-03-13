@@ -24,7 +24,7 @@ import {
     handleCredentialsSignin,
     handleGithubSignin,
 } from "@/app/lib/actions";
-import { useState, useEffect } from "react";
+import { useState, useEffect, Suspense } from "react";
 import ErrorMessage from "@/components/error/Error";
 import { FormButtons } from "@/components/button/FormButtons";
 import Link from "next/link";
@@ -74,6 +74,7 @@ export default function SignIn() {
     };
 
     return (
+        <Suspense fallback={<div>Loading...</div>}>
         <div className={`${roboto.className} grow flex items-center justify-center p-4 md:mt-8 mt-12`}>
             <div className="relative mx-auto w-full max-w-md flex-col space-y-4 p-4 sm:p-6 md:p-8 lg:w-1/3">
                 <div className="flex h-14 sm:h-16 w-full items-end rounded-lg bg-special-500 p-3">
@@ -164,5 +165,6 @@ export default function SignIn() {
                 </Card>
             </div>
         </div>
+        </Suspense>
     );
 }

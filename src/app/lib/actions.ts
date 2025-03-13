@@ -84,7 +84,7 @@ export async function handleCredentialsSignin({ email, password }: {
     password: string
 }) {
     try {
-        await signIn("credentials", { email, password, redirectTo: "/dashboard" });
+        await signIn("credentials", { email, password, redirectTo: "https://todo-nextjs-blond.vercel.app/dashboard" });
     } catch (error) {
         if (error instanceof AuthError) {
             switch (error.type) {
@@ -103,11 +103,11 @@ export async function handleCredentialsSignin({ email, password }: {
 }
 
 export async function handleGithubSignin() {
-    await signIn("github", { redirectTo: "/dashboard" });
+    await signIn("github", { redirectTo: "https://todo-nextjs-blond.vercel.app/dashboard" });
 }
 
 export async function handleSignOut() {
-    await signOut();
+    await signOut({ redirectTo: "https://todo-nextjs-blond.vercel.app/auth/signin" });
 }
 
 export async function handleSignUp({ name, email, password, confirmPassword }: {

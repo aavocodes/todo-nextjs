@@ -43,7 +43,7 @@ export default function EditTodo({
                     onClick={handleEdit}
                     text={<MdEdit />}
                     actionButton
-                    bgColor='bg-special-500 hover:bg-special-600'
+                    bgColor='bg-special-600/90 hover:bg-special-700'
                 />
             ) : (
                 <Form action={updateTodoTitle} onSubmit={handleSubmit} className='flex items-center w-full'>
@@ -53,7 +53,7 @@ export default function EditTodo({
                         <Button
                             type='submit'
                             text={<FaCheck />}
-                            bgColor='text-special-50 border border-special-500 hover:text-special-50 hover:bg-special-700 cursor-pointer transition bg-special-800'
+                            bgColor='text-special-50 border border-special-500 hover:text-special-50 hover:bg-special-700 cursor-pointer transition bg-special-600/90'
                             className='py-2 mt-[.5px]'/>
                     </div>
                 </Form>

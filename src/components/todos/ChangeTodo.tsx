@@ -14,8 +14,10 @@ export default function ChangeTodo({ todo }: { todo: todoProps }) {
                 text={<FaCheck />}
                 type='submit'
                 actionButton
-                bgColor={`transition-colors duration-5 ${todo.isCompleted ? 'bg-jade-600 hover:bg-jade-700'  : 'bg-special-600 hover:bg-jade-700'
-                    }`}>
+                bgColor={`transition-colors duration-5 ${todo.isCompleted ? 'bg-jade-600/80 hover:bg-jade-600' : 'bg-special-600/90 hover:bg-jade-600/80'
+                    }`}
+                className="backdrop-blur-md shadow-md"
+            >
             </Button>
         </Form>
     )

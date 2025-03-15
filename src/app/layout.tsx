@@ -17,7 +17,7 @@ export default function RootLayout({
   return (
     <SessionProvider>
       <html lang="en">
-        <body className='bg-special-800 text-special-50'>
+        <body className='bg-special-100 text-special-50'>
           <NavBar />
           {children}
         </body>

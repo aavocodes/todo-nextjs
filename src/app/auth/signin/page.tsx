@@ -76,14 +76,14 @@ function SignInContent() {
     return (
         <div className={`${roboto.className} grow flex items-center justify-center p-4 md:mt-8 mt-12`}>
             <div className="relative mx-auto w-full max-w-md flex-col space-y-4 p-4 sm:p-6 md:p-8 lg:w-1/3">
-                <div className="flex h-14 sm:h-16 w-full items-end rounded-lg bg-special-500 p-3">
+                <div className="flex h-14 sm:h-16 w-full items-end rounded-lg border border-special-200/40 bg-special-50/50 p-3 backdrop-blur-md shadow-md">
                     <div className="w-32 text-gray-100 sm:w-36">
                         🍵
                     </div>
                 </div>
-                <Card className="w-full max-w-md bg-special-700 border border-special-500">
+                <Card className="w-full max-w-md border border-special-200/40 bg-special-50/50 backdrop-blur-md shadow-md">
                     <CardHeader>
-                        <CardTitle className="text-3xl font-bold text-center text-special-50">
+                        <CardTitle className="text-3xl font-bold text-center text-special-800">
                             Welcome Back
                         </CardTitle>
                     </CardHeader>
@@ -99,11 +99,11 @@ function SignInContent() {
                                     name="email"
                                     render={({ field }) => (
                                         <FormItem>
-                                            <FormLabel className='text-special-50'>Email</FormLabel>
+                                            <FormLabel className='text-special-800'>Email</FormLabel>
                                             <FormControl>
                                                 <FormInputs
                                                     type="email"
-                                                    placeholder="@ Enter your email address"
+                                                    placeholder="＠ Enter email address"
                                                     autoComplete="off"
                                                     {...field}
                                                 />
@@ -118,11 +118,11 @@ function SignInContent() {
                                     name="password"
                                     render={({ field }) => (
                                         <FormItem>
-                                            <FormLabel className='text-special-50'>Password</FormLabel>
+                                            <FormLabel className='text-special-800'>Password</FormLabel>
                                             <FormControl>
                                                 <FormInputs
                                                     type="password"
-                                                    placeholder="Enter password"
+                                                    placeholder="🔑 Enter password"
                                                     {...field}
                                                 />
                                             </FormControl>
@@ -140,19 +140,19 @@ function SignInContent() {
                             </form>
                         </Form>
 
-                        <span className="text-sm text-special-50 text-center block my-2">
+                        <span className="text-sm text-special-800 text-center block my-2">
                             or
                         </span>
                         <form className="w-full" action={handleGithubSignin}>
                             <FormButtons
                                 variant="outline"
-                                className="w-full bg-special-50 hover:bg-special-100"
+                                className="w-full bg-special-50 hover:bg-special-100 border border-special-100 backdrop-blur-md shadow-md"
                                 type="submit"
                             >
                                 <GitHubLogoIcon className="h-4 w-4 mr-2" />
                                 Sign in with GitHub
                             </FormButtons>
-                            <div className="flex h-8 mt-2 justify-center  space-x-1 text-special-50">
+                            <div className="flex h-8 mt-2 justify-center  space-x-1 text-special-800">
                                 <span className='text-sm mt-3'>Don&apos;t have an account?</span>
                                 <Link className='text-sm mt-3 underline hover:text-blue-400'
                                     href='/auth/signup'>

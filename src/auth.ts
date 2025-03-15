@@ -13,13 +13,58 @@ export const { handlers, signIn, signOut, auth } = NextAuth({
     providers: [
 
         Github({
-            profile() {
+            profile(profile) {
                 return {
-                    id: 'some random id goes here...',
-                    role: 'admin'
-                }
+                    id: profile.id.toString(),  // Ensure GitHub user ID is a string
+                    name: profile.name,
+                    email: profile.email,
+                    image: profile.avatar_url,
+                    role: "user", // Default role for GitHub users
+                };
             }
         }),
+
+        // Github({
+        //     profile: async (profile) => {
+        //         const user = await prisma.user.findUnique({
+        //             where: {
+        //                 githubId: profile.id.toString(),
+        //             }
+        //         });
+
+        //         if (!user) {
+
+        //             if (!profile.email) {
+        //                 throw new Error('GitHub email is required');
+        //             }
+        //             // Create a new user if they don't exist
+        //             const newUser = await prisma.user.create({
+        //                 data: {
+        //                     githubId: profile.id.toString(),
+        //                     email: profile.email,
+        //                     name: profile.name,
+        //                     image: profile.avatar_url,
+        //                     role: "user", // Default role for GitHub users
+        //                 }
+        //             });
+        //             return {
+        //                 id: newUser.id.toString(),
+        //                 name: newUser.name,
+        //                 email: newUser.email,
+        //                 image: newUser.image,
+        //                 role: newUser.role,
+        //             };
+        //         }
+
+        //         return {
+        //             id: user.id.toString(),
+        //             name: user.name,
+        //             email: user.email,
+        //             image: user.image,
+        //             role: user.role,
+        //         };
+        //     }
+        // }),
 
         Credentials({
 

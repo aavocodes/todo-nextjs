@@ -35,9 +35,9 @@ export default async function TodoCompleter() {
     const data = await getCompletedTodos(userId);
 
     return (
-        <div className="flex-grow flex-col bg-special-800 border-t border-special-300 md:border-0 md:border-r py-4 w-full">
-            <div className="flex flex-col grow bg-special-800 p-4 text-center">
-                <h1 className="text-lg md:text-2xl">Completed</h1>
+        <div className="flex-grow flex-col bg-special-100 border-t border-special-200/80 md:border-0 md:border-r py-4 w-full">
+            <div className="flex flex-col grow bg-special-100 p-4 text-center">
+                <h1 className="text-lg md:text-2xl text-gray-900">Completed</h1>
 
                 {/* Responsive completed todos container */}
                 <div className="flex flex-col items-center mt-6">

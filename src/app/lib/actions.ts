@@ -103,11 +103,11 @@ export async function handleCredentialsSignin({ email, password }: {
 }
 
 export async function handleGithubSignin() {
-    await signIn("github", { redirectTo: "https://todo-nextjs-blond.vercel.app/dashboard" });
+    await signIn("github", { redirectTo: "/" });
 }
 
 export async function handleSignOut() {
-    await signOut({ redirectTo: "https://todo-nextjs-blond.vercel.app/auth/signin" });
+    await signOut();
 }
 
 export async function handleSignUp({ name, email, password, confirmPassword }: {

@@ -9,7 +9,7 @@ export default function DeleteTodo({ todo }: { todo: todoProps }) {
     return (
         <Form action={actions.deleteTodo}>
             <Input type='hidden' name='inputId' value={todo.id} />
-            <Button actionButton type='submit' bgColor='bg-special-100 hover:bg-burg-700' text={<BsTrash className='text-black' />} />
+            <Button actionButton type='submit' bgColor='bg-special-600/90 hover:bg-burg-700/50' text={<BsTrash className='text-white' />} />
         </Form>
     )
 }

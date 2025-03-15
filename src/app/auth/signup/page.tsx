@@ -60,14 +60,14 @@ export default function SignUp() {
         <Suspense fallback={<div>Loading...</div>}>
             <div className={`${roboto.className} grow flex items-center justify-center p-4 md:mt-8 mt-12`}>
                 <div className="relative mx-auto w-full max-w-md flex-col space-y-4 p-4 sm:p-6 md:p-8 lg:w-1/3">
-                    <div className="flex h-14 sm:h-16 w-full items-end rounded-lg bg-special-500 p-3">
+                    <div className="flex h-14 sm:h-16 w-full items-end rounded-lg border border-special-200/40 bg-special-50/50 p-3 backdrop-blur-md shadow-md p-3">
                         <div className="w-32 text-gray-100 sm:w-36">
                             🍵
                         </div>
                     </div>
-                    <Card className="w-full max-w-md bg-special-700 border border-special-500">
+                    <Card className="w-full max-w-md border border-special-200/40 bg-special-50/50 backdrop-blur-md shadow-md">
                         <CardHeader>
-                            <CardTitle className="text-3xl font-bold text-center text-special-50">
+                            <CardTitle className="text-3xl font-bold text-center text-special-800">
                                 Create Account
                             </CardTitle>
                         </CardHeader>
@@ -76,7 +76,7 @@ export default function SignUp() {
                             <Form {...form}>
                                 <form
                                     onSubmit={form.handleSubmit(onSubmit)}
-                                    className="space-y-2 text-special-50 mb-4"
+                                    className="space-y-2 text-special-800 mb-4"
                                 >
                                     {[
                                         "name",

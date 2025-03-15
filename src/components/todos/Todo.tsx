@@ -10,7 +10,7 @@ export default function Todo({ todo }: { todo: todoProps }) {
     const [isEditing, setIsEditing] = useState(false);
 
     return (
-        <div className='grow mx-auto flex flex-row my-1 items-center bg-special-800 border border-special-300 py-4 pl-4 rounded-2xl bg-gradient-to-r from-special-700 to-special-700'>
+        <div className='grow mx-auto flex flex-row my-1 items-center bg-special-50/50 border border-gray-200/40 py-4 pl-4 rounded-2xl text-gray-900 backdrop-blur-md shadow-md'>
             {/* Hide ChangeTodo while editing */}
             {!isEditing && <ChangeTodo todo={todo} />}
 

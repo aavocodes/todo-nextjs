@@ -11,7 +11,7 @@ export default async function Page() {
     <main className={`${roboto.className} flex min-h-screen flex-col p-6`}>
       <div className="flex h-20 shrink-0 items-end rounded-lg border border-special-200/40 bg-special-50/50 p-4 md:h-40 md:px-20 md:w-2/5 mt-16 backdrop-blur-md shadow-md">
         <h1 className='text-5xl text-gray-200'>
-          🍵 
+          🍵
         </h1>
       </div>
       <div className="mt-4 flex grow flex-col gap-4 md:flex-row">
@@ -52,13 +52,13 @@ export default async function Page() {
             <div className='flex grow flex-col lg:flex-row gap-4 mt-4'>
               <Link
                 href='/auth/signin'
-                  className='flex items-center gap-4 self-start rounded-lg bg-jade-600/80 px-6 py-3 text-sm font-medium transition-colors hover:bg-jade-600 hover:border-jade-600 border border-jade-400 md:text-base whitespace-nowrap backdrop-blur-md shadow-md'
+                className='flex items-center gap-4 self-start rounded-lg bg-jade-600/80 px-6 py-3 text-sm font-medium transition-colors hover:bg-jade-600 hover:border-jade-600 border border-jade-400 md:text-base whitespace-nowrap backdrop-blur-md shadow-md'
               >
                 <span>Login</span> <ArrowRightIcon className='w-5 md:w-6' />
               </Link>
               <Link
                 href='/auth/signup'
-                  className='flex items-center gap-4 self-start rounded-lg bg-jade-600/80 px-5 py-3 text-sm font-medium transition-colors hover:bg-jade-600 hover:border-jade-600 border border-jade-400 md:text-base whitespace-nowrap backdrop-blur-md shadow-md'
+                className='flex items-center gap-4 self-start rounded-lg bg-jade-600/80 px-5 py-3 text-sm font-medium transition-colors hover:bg-jade-600 hover:border-jade-600 border border-jade-400 md:text-base whitespace-nowrap backdrop-blur-md shadow-md'
               >
                 <span>Signup</span> <ArrowRightIcon className='w-5 md:w-6' />
               </Link>

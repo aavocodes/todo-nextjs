@@ -16,7 +16,7 @@ export default function Todo({ todo }: { todo: todoProps }) {
 
             {/* Hide todo title while editing */}
             {!isEditing && (
-                <span className='anitialiased uppercase break-words overflow-hidden text-ellipsis mx-1'>
+                <span className={`anitialiased uppercase break-words overflow-hidden text-ellipsis mx-1 ${todo.isCompleted ? 'line-through text-gray-500' : 'text-gray-800'}`}>
                     {todo.title}
                 </span>
             )}

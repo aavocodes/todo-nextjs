@@ -10,7 +10,7 @@ export default async function Layout({ children }: { children: React.ReactNode }
     return (
         <div className={`${roboto.className}`}>
             <div className="pt-16 w-full flex h-screen flex-col md:flex-row md:overflow-y-auto md:px-0 bg-special-100">
-                <div className="w-full flex-col flex md:w-[50%] md:overflow-y-auto order-last md:order-first bg-special-800">
+                <div className="w-full flex-col flex md:w-[50%] md:overflow-y-auto order-last md:order-first bg-special-100">
                     <Suspense fallback={<TodoCompleterSkeleton />}>
                         <TodoCompleter />
                     </Suspense>

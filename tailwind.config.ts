@@ -88,6 +88,18 @@ export default {
 					'800': '#661818',
 					'900': '#330c0c'
 				},
+				sage: {
+					"50": "#f6f8f5",
+					"100": "#ecf1eb",
+					"200": "#dae2d8",
+					"300": "#c7d4c4",
+					"400": "#b5c5b1",
+					"500": "#a2b79d",
+					"600": "#82927e",
+					"700": "#616e5e",
+					"800": "#41493f",
+					"900": "#20251f"
+				},
 				card: {
 					DEFAULT: 'hsl(var(--card))',
 					foreground: 'hsl(var(--card-foreground))'
